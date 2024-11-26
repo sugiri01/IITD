@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Courses - Edathena Academy</title>
+    <style>
+        :root {
+            --navy: #000042;
+            --turquoise: #40E0D0;
+            --light-blue: #E6F3F5;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--navy);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: white;
+        }
+        .slide {
+            width: 100vw;
+            height: 56.25vw;
+            max-height: 100vh;
+            max-width: 177.78vh;
+            margin: auto;
+            position: relative;
+            padding: 40px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 60px;
+            object-fit: contain;
+        }
+        .title {
+            font-size: 48px;
+            color: var(--turquoise);
+            margin: 60px 0 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--turquoise);
+        }
+        .course-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .section {
+            background: rgba(64, 224, 208, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(64, 224, 208, 0.2);
+        }
+        .section-title {
+            font-size: 28px;
+            color: var(--turquoise);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(64, 224, 208, 0.3);
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+        .course-card {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(64, 224, 208, 0.1);
+        }
+        .course-name {
+            font-size: 20px;
+            color: var(--turquoise);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .course-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .info-item {
+            font-size: 14px;
+        }
+        .info-label {
+            color: rgba(230, 243, 245, 0.6);
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+        .info-value {
+            color: var(--light-blue);
+        }
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        .tool-tag {
+            background: rgba(64, 224, 208, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--turquoise);
+            white-space: nowrap;
+        }
+        .topics {
+            margin-top: 15px;
+        }
+        .topics-label {
+            color: rgba(230, 243, 245, 0.6);
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .topics-text {
+            color: var(--light-blue);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .price {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(64, 224, 208, 0.1);
+            color: var(--turquoise);
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <img src="logo.png" alt="Edathena Academy" class="logo">
+        
+        <h1 class="title">COURSE CURRICULUM</h1>
+
+        <div class="course-sections">
+            <!-- Core Modules Section -->
+            <div class="section">
+                <h2 class="section-title">Core Modules</h2>
+                <div class="course-grid">
+                    <!-- Module 1 -->
+                    <div class="course-card">
+                        <div class="course-name">Module 1: Python Programming</div>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">8 Weeks</div>
+                            </div>
+                        </div>
+                        <div class="tools-list">
+                            <div class="tool-tag">Python 3.x</div>
+                            <div class="tool-tag">Jupyter Notebook</div>
+                            <div class="tool-tag">PyCharm IDE</div>
+                            <div class="tool-tag">Git & GitHub</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topics-label">Key Topics</div>
+                            <div class="topics-text">Python Basics and Advanced Concepts, OOP, Data Structures</div>
+                        </div>
+                        <div class="price">₹25,000</div>
+                    </div>
+
+                    <!-- Module 2 -->
+                    <div class="course-card">
+                        <div class="course-name">Module 2: Data Engineering</div>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">8 Weeks</div>
+                            </div>
+                        </div>
+                        <div class="tools-list">
+                            <div class="tool-tag">PostgreSQL</div>
+                            <div class="tool-tag">MongoDB</div>
+                            <div class="tool-tag">Apache Spark</div>
+                            <div class="tool-tag">Docker</div>
+                            <div class="tool-tag">AWS/Azure Basics</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topics-label">Key Topics</div>
+                            <div class="topics-text">Database Management, ETL Processes, Big Data Fundamentals</div>
+                        </div>
+                        <div class="price">₹30,000</div>
+                    </div>
+
+                    <!-- Add remaining core modules similarly -->
+                    <!-- Module 3 -->
+                    <div class="course-card">
+                        <div class="course-name">Module 3: Machine Learning</div>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">8 Weeks</div>
+                            </div>
+                        </div>
+                        <div class="tools-list">
+                            <div class="tool-tag">Scikit-learn</div>
+                            <div class="tool-tag">Pandas</div>
+                            <div class="tool-tag">NumPy</div>
+                            <div class="tool-tag">Matplotlib</div>
+                            <div class="tool-tag">Seaborn</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topics-label">Key Topics</div>
+                            <div class="topics-text">Supervised Learning, Unsupervised Learning, Model Evaluation</div>
+                        </div>
+                        <div class="price">₹35,000</div>
+                    </div>
+
+                    <!-- Module 4 -->
+                    <div class="course-card">
+                        <div class="course-name">Module 4: Business Analytics</div>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">8 Weeks</div>
+                            </div>
+                        </div>
+                        <div class="tools-list">
+                            <div class="tool-tag">Power BI</div>
+                            <div class="tool-tag">Tableau</div>
+                            <div class="tool-tag">Excel Advanced</div>
+                            <div class="tool-tag">SQL</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topics-label">Key Topics</div>
+                            <div class="topics-text">Data Visualization, Statistical Analysis, Business Intelligence</div>
+                        </div>
+                        <div class="price">₹30,000</div>
+                    </div>
+
+                    <!-- Module 5 -->
+                    <div class="course-card">
+                        <div class="course-name">Module 5: Advanced AI</div>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">8 Weeks</div>
+                            </div>
+                        </div>
+                        <div class="tools-list">
+                            <div class="tool-tag">TensorFlow</div>
+                            <div class="tool-tag">PyTorch</div>
+                            <div class="tool-tag">Keras</div>
+                            <div class="tool-tag">NVIDIA CUDA</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topics-label">Key Topics</div>
+                            <div class="topics-text">Deep Learning, Neural Networks, Computer Vision, Natural Language Processing</div>
+                        </div>
+                        <div class="price">₹40,000</div>
+                    </div>
+
+                    <!-- Module 6 -->
+                    <div class="course-card">
+                        <div class="course-name">Module 6: Full Stack AI</div>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">8 Weeks</div>
+                            </div>
+                        </div>
+                        <div class="tools-list">
+                            <div class="tool-tag">Flask/Django</div>
+                            <div class="tool-tag">React/Angular</div>
+                            <div class="tool-tag">REST APIs</div>
+                            <div class="tool-tag">MLOps Tools</div>
+                            <div class="tool-tag">Docker & Kubernetes</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topics-label">Key Topics</div>
+                            <div class="topics-text">Web Development, API Development, Model Deployment, Cloud Integration</div>
+                        </div>
+                        <div class="price">₹35,000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Domain Courses Section -->
+            <div class="section">
+                <h2 class="section-title">Domain Specializations</h2>
+                <div class="course-grid">
+                    <!-- Healthcare Analytics -->
+                    <div class="course-card">
+                        <div class="course-name">Healthcare Analytics</div>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">8 Weeks</div>
+                            </div>
+                        </div>
+                        <div class="tools-list">
+                            <div class="tool-tag">MATLAB</div>
+                            <div class="tool-tag">R Programming</div>
+                            <div class="tool-tag">SPSS</div>
+                            <div class="tool-tag">Healthcare APIs</div>
+                            <div class="tool-tag">FHIR Standards</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topics-label">Key Topics</div>
+                            <div class="topics-text">Medical Image Analysis, Patient Data Analytics, Disease Prediction</div>
+                        </div>
+                        <div class="price">₹30,000/person</div>
+                    </div>
+
+                    <!-- Clinical AI -->
+                    <div class="course-card">
+                        <div class="course-name">Clinical AI</div>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">8 Weeks</div>
+                            </div>
+                        </div>
+                        <div class="tools-list">
+                            <div class="tool-tag">OpenCV</div>
+                            <div class="tool-tag">PyDicom</div>
+                            <div class="tool-tag">TensorFlow Healthcare</div>
+                            <div class="tool-tag">MedPy</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topics-label">Key Topics</div>
+                            <div class="topics-text">Diagnostic AI Models, Drug Discovery Analytics, Clinical Trials</div>
+                        </div>
+                        <div class="price">₹35,000/person</div>
+                    </div>
+
+                    <!-- Smart Manufacturing -->
+                    <div class="course-card">
+                        <div class="course-name">Smart Manufacturing</div>
+                        <div class="course-info">
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">8 Weeks</div>
+                            </div>
+                        </div>
+                        <div class="tools-list">
+                            <div class="tool-tag">Industrial IoT Platforms</div>
+                            <div class="tool-tag">Siemens MindSphere</div>
+                            <div class="tool-tag">Azure IoT Hub</div>
+                            <div class="tool-tag">PLC Programming</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topics-label">Key Topics</div>
+                            <div class="topics-text">Predictive Maintenance, Quality Control AI, Production Optimization</div>
+                        </div>
+                        <div class="price">₹30,000/person</div>
+                    </div>
+
+                <!-- Supply Chain Analytics -->
+                <div class="course-card">
+                    <div class="course-name">Supply Chain Analytics</div>
+                    <div class="course-info">
+                        <div class="info-item">
+                            <div class="info-label">Duration</div>
+                            <div class="info-value">8 Weeks</div>
+                        </div>
+                    </div>
+                    <div class="tools-list">
+                        <div class="tool-tag">SAP Analytics</div>
+                        <div class="tool-tag">Oracle SCM Cloud</div>
+                        <div class="tool-tag">Power BI</div>
+                        <div class="tool-tag">Python Supply Chain Libraries</div>
+                        <div class="tool-tag">Blockchain Tools</div>
+                    </div>
+                    <div class="topics">
+                        <div class="topics-label">Key Topics</div>
+                        <div class="topics-text">Demand Forecasting, Inventory Optimization, Logistics Analytics, Supply Chain Visibility, Risk Analytics</div>
+                    </div>
+                    <div class="price">₹30,000/person</div>
+                </div>
+
+                <!-- FinTech AI Solutions -->
+                <div class="course-card">
+                    <div class="course-name">FinTech AI Solutions</div>
+                    <div class="course-info">
+                        <div class="info-item">
+                            <div class="info-label">Duration</div>
+                            <div class="info-value">8 Weeks</div>
+                        </div>
+                    </div>
+                    <div class="tools-list">
+                        <div class="tool-tag">R for Finance</div>
+                        <div class="tool-tag">Bloomberg API</div>
+                        <div class="tool-tag">Financial APIs</div>
+                        <div class="tool-tag">Algorithmic Trading Platforms</div>
+                        <div class="tool-tag">PyAlgoTrade</div>
+                    </div>
+                    <div class="topics">
+                        <div class="topics-label">Key Topics</div>
+                        <div class="topics-text">Credit Risk Assessment, Fraud Detection, Trading Algorithms, Portfolio Optimization, Customer Segmentation</div>
+                    </div>
+                    <div class="price">₹35,000/person</div>
+                </div>
+
+                <!-- Retail Analytics & AI -->
+                <div class="course-card">
+                    <div class="course-name">Retail Analytics & AI</div>
+                    <div class="course-info">
+                        <div class="info-item">
+                            <div class="info-label">Duration</div>
+                            <div class="info-value">8 Weeks</div>
+                        </div>
+                    </div>
+                    <div class="tools-list">
+                        <div class="tool-tag">Shopify Analytics</div>
+                        <div class="tool-tag">Google Analytics</div>
+                        <div class="tool-tag">Retail POS Systems</div>
+                        <div class="tool-tag">Recommendation Engines</div>
+                        <div class="tool-tag">CRM Systems</div>
+                    </div>
+                    <div class="topics">
+                        <div class="topics-label">Key Topics</div>
+                        <div class="topics-text">Customer Analytics, Price Optimization, Inventory Management, Market Basket Analysis, Personalization Engines</div>
+                    </div>
+                    <div class="price">₹30,000/person</div>
+                </div>
+
+                <!-- IT/ITES AI Solutions -->
+                <div class="course-card">
+                    <div class="course-name">IT/ITES AI Solutions</div>
+                    <div class="course-info">
+                        <div class="info-item">
+                            <div class="info-label">Duration</div>
+                            <div class="info-value">8 Weeks</div>
+                        </div>
+                    </div>
+                    <div class="tools-list">
+                        <div class="tool-tag">ServiceNow</div>
+                        <div class="tool-tag">Splunk</div>
+                        <div class="tool-tag">ELK Stack</div>
+                        <div class="tool-tag">AIOps Tools</div>
+                        <div class="tool-tag">Jenkins AI</div>
+                    </div>
+                    <div class="topics">
+                        <div class="topics-label">Key Topics</div>
+                        <div class="topics-text">IT Service Management, Automated Ticket Resolution, System Performance Analytics, Security Analytics, DevOps Automation</div>
+                    </div>
+                    <div class="price">₹30,000/person</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
