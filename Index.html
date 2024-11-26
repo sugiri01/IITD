@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdAthena Academy - AI Education</title>
+    <style>
+        :root {
+            --navy: #000066;
+            --turquoise: #40E0D0;
+            --light-blue: #E6F3F5;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--navy);
+            color: white;
+            font-family: system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding: 20px;
+            background: rgba(64, 224, 208, 0.1);
+            border-bottom: 2px solid var(--turquoise);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+        .logo {
+            height: 60px;
+            object-fit: contain;
+        }
+        .presentation-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(64, 224, 208, 0.2);
+        }
+        .control-btn {
+            padding: 8px 16px;
+            background: var(--turquoise);
+            border: none;
+            border-radius: 20px;
+            color: var(--navy);
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .control-btn:hover {
+            background: #2bc0b0;
+        }
+        .control-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .slide-indicator {
+            display: flex;
+            align-items: center;
+            color: var(--turquoise);
+            font-size: 14px;
+            padding: 0 15px;
+        }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            overflow-x: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--turquoise) transparent;
+        }
+        .tab {
+            padding: 12px 24px;
+            background: rgba(64, 224, 208, 0.1);
+            border: 1px solid var(--turquoise);
+            border-radius: 8px;
+            color: var(--turquoise);
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .tab:hover {
+            background: rgba(64, 224, 208, 0.2);
+        }
+        .tab.active {
+            background: var(--turquoise);
+            color: var(--navy);
+        }
+        .content {
+            flex: 1;
+            position: relative;
+        }
+        .welcome-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--turquoise);
+        }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 140px);
+            border: none;
+            display: none;
+        }
+        iframe.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="EdAthena Academy" class="logo">
+        <div class="presentation-controls">
+            <button class="control-btn" id="prevBtn" onclick="previousSlide()">
+                ← Previous
+            </button>
+            <div class="slide-indicator">
+                <span id="current-slide">1</span> / <span id="total-slides">12</span>
+            </div>
+            <button class="control-btn" id="nextBtn" onclick="nextSlide()">
+                Next →
+            </button>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="showSlide('index')">Home</button>
+        <button class="tab" onclick="showSlide('problem')">Problem</button>
+        <button class="tab" onclick="showSlide('solution')">Solution</button>
+        <button class="tab" onclick="showSlide('market')">Market</button>
+        <button class="tab" onclick="showSlide('comp')">Competition</button>
+        <button class="tab" onclick="showSlide('benefits')">Benefits</button>
+        <button class="tab" onclick="showSlide('road')">Roadmap</button>
+        <button class="tab" onclick="showSlide('team')">Team</button>
+        <button class="tab" onclick="showSlide('swot')">SWOT</button>
+        <button class="tab" onclick="showSlide('ask')">Ask</button>
+        <button class="tab" onclick="showSlide('gtm')">GTM</button>
+    </div>
+
+    <div class="content">
+        <div id="index-frame" class="welcome-message active">
+        </div>
+        <iframe id="problem-frame" src="problem.html"></iframe>
+        <iframe id="solution-frame" src="solution.html"></iframe>
+        <iframe id="market-frame" src="market.html"></iframe>
+        <iframe id="comp-frame" src="comp.html"></iframe>
+        <iframe id="benefits-frame" src="benefits.html"></iframe>
+        <iframe id="road-frame" src="road.html"></iframe>
+        <iframe id="team-frame" src="team.html"></iframe>
+        <iframe id="swot-frame" src="swot.html"></iframe>
+        <iframe id="ask-frame" src="ask.html"></iframe>
+        <iframe id="gtm-frame" src="gtm.html"></iframe>
+    </div>
+
+    <script>
+        const slides = [
+            'index', 'problem', 'solution', 'market', 'comp', 
+            'benefits', 'road', 'team', 'swot', 'ask', 'gtm'
+        ];
+        let currentSlideIndex = 0;
+
+        function showSlide(id) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            document.querySelectorAll('.content > *').forEach(frame => frame.classList.remove('active'));
+            document.getElementById(`${id}-frame`).classList.add('active');
+
+            currentSlideIndex = slides.indexOf(id);
+            updateSlideIndicator();
+            updateNavigationButtons();
+        }
+
+        function nextSlide() {
+            if (currentSlideIndex < slides.length - 1) {
+                currentSlideIndex++;
+                showSlide(slides[currentSlideIndex]);
+            }
+        }
+
+        function previousSlide() {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                showSlide(slides[currentSlideIndex]);
+            }
+        }
+
+        function updateSlideIndicator() {
+            document.getElementById('current-slide').textContent = currentSlideIndex + 1;
+            document.getElementById('total-slides').textContent = slides.length;
+        }
+
+        function updateNavigationButtons() {
+            document.getElementById('prevBtn').disabled = currentSlideIndex === 0;
+            document.getElementById('nextBtn').disabled = currentSlideIndex === slides.length - 1;
+        }
+
+        updateSlideIndicator();
+        updateNavigationButtons();
+    </script>
+</body>
+</html>
