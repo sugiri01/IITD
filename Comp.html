@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitor Analysis - Edathena Academy</title>
+    <style>
+        :root {
+            --navy: #000033;
+            --turquoise: #40E0D0;
+            --light-blue: #E6F3F5;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--navy);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: white;
+            min-height: 100vh;
+        }
+        .slide {
+            width: 100vw;
+            height: 56.25vw;
+            max-height: 100vh;
+            max-width: 177.78vh;
+            margin: auto;
+            position: relative;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 60px;
+            object-fit: contain;
+        }
+        .title {
+            font-size: 48px;
+            color: var(--turquoise);
+            margin: 60px 0 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--turquoise);
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) 300px;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .competitor-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid rgba(64, 224, 208, 0.2);
+        }
+        .competitor-name {
+            font-size: 24px;
+            color: var(--turquoise);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(64, 224, 208, 0.3);
+        }
+        .metric-row {
+            margin-bottom: 20px;
+        }
+        .metric-label {
+            color: var(--light-blue);
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .metric-value {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .progress-bar {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--turquoise);
+            transition: width 0.3s ease;
+        }
+        .advantages-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid rgba(64, 224, 208, 0.2);
+        }
+        .advantages-title {
+            font-size: 20px;
+            color: var(--turquoise);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .advantages-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .advantages-list li {
+            color: var(--light-blue);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+        .advantages-list li::before {
+            content: "•";
+            color: var(--turquoise);
+        }
+        .summary {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            right: 40px;
+            text-align: center;
+            color: var(--light-blue);
+            font-size: 16px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <img src="logo.png" alt="Edathena Academy" class="logo">
+        
+        <h1 class="title">COMPETITOR ANALYSIS</h1>
+
+        <div class="comparison-grid">
+            <div class="competitor-card">
+                <div class="competitor-name">Great Learning / UpGrad</div>
+                <div class="metric-row">
+                    <div class="metric-label">Course Pricing</div>
+                    <div class="metric-value">₹75,000 - ₹2.5L</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-label">Course Duration</div>
+                    <div class="metric-value">6-12 months</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-label">Live Classes</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-label">Industry Projects</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 70%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="competitor-card">
+                <div class="competitor-name">EdAthena</div>
+                <div class="metric-row">
+                    <div class="metric-label">Course Pricing</div>
+                    <div class="metric-value">₹45,000 - ₹85,000</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-label">Course Duration</div>
+                    <div class="metric-value">4-6 months</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-label">Live Classes</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-label">Industry Projects</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="competitor-card">
+                <div class="competitor-name">Simplilearn / Analytics Vidhya</div>
+                <div class="metric-row">
+                    <div class="metric-label">Course Pricing</div>
+                    <div class="metric-value">₹95,000 - ₹1.8L</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-label">Course Duration</div>
+                    <div class="metric-value">8-12 months</div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-label">Live Classes</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="metric-row">
+                    <div class="metric-label">Industry Projects</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advantages-card">
+                <div class="advantages-title">🎯 Market Position</div>
+                <ul class="advantages-list">
+                    <li>Most competitive pricing in the market</li>
+                    <li>Shortest completion time with focused learning</li>
+                    <li>Highest number of hands-on projects</li>
+                    <li>AI-powered personalized learning paths</li>
+                    <li>Real-time industry mentorship</li>
+                    <li>Flexible payment options</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="summary">
+            Edathena delivers the highest value proposition with industry-leading practical exposure at the most competitive price point
+        </div>
+    </div>
+</body>
+</html>

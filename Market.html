@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Size - Edathena Academy</title>
+    <style>
+        :root {
+            --navy: #000066;
+            --turquoise: #40E0D0;
+            --light-blue: #E6F3F5;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--navy) 0%, #000044 100%);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: white;
+            min-height: 100vh;
+        }
+        .slide {
+            width: 100vw;
+            height: 56.25vw;
+            max-height: 100vh;
+            max-width: 177.78vh;
+            margin: auto;
+            position: relative;
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            background: radial-gradient(circle at top right, rgba(64, 224, 208, 0.1) 0%, transparent 60%);
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 60px;
+            object-fit: contain;
+        }
+        .header {
+            padding: 60px 0 40px;
+            border-bottom: 2px solid var(--turquoise);
+            margin-bottom: 40px;
+        }
+        .title {
+            font-size: 64px;
+            background: linear-gradient(to right, var(--turquoise), var(--light-blue));
+            -webkit-background-clip: text;
+            color: transparent;
+            margin: 0;
+            font-weight: 700;
+        }
+        .market-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 20px 0;
+            flex: 1;
+        }
+        .market-stats {
+            flex: 1;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(64, 224, 208, 0.2);
+        }
+        .region-title {
+            font-size: 36px;
+            color: var(--turquoise);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .region-title::after {
+            content: "";
+            height: 2px;
+            flex: 1;
+            background: linear-gradient(to right, var(--turquoise), transparent);
+        }
+        .market-value {
+            font-size: 56px;
+            font-weight: bold;
+            color: var(--turquoise);
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(64, 224, 208, 0.3);
+        }
+        .market-label {
+            font-size: 20px;
+            color: var(--light-blue);
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 40px;
+        }
+        .metric-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+        .metric-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+        .metric-label {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.4;
+        }
+        .footnote {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            right: 40px;
+            text-align: center;
+            color: var(--light-blue);
+            font-size: 20px;
+            line-height: 1.5;
+            padding: 20px;
+            background: rgba(0, 0, 102, 0.3);
+            border-radius: 12px;
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <img src="logo.png" alt="Edathena Academy" class="logo">
+        
+        <div class="header">
+            <h1 class="title">MARKET SIZE</h1>
+        </div>
+
+        <div class="market-container">
+            <div class="market-stats">
+                <h2 class="region-title">INDIA</h2>
+                <div class="market-value">₹12,500 Cr</div>
+                <div class="market-label">Total AI Education Market</div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-number">2.5 Mn</div>
+                    <div class="metric-label">TOTAL AVAILABLE MARKET</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">800K</div>
+                    <div class="metric-label">SERVICEABLE AVAILABLE MARKET</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">200K</div>
+                    <div class="metric-label">SERVICE OBTAINABLE MARKET</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footnote">
+            Total addressable AI education market includes working professionals, students, and organizations seeking AI upskilling across tier 1, 2 & 3 cities in India
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Edathena Academy</title>
+    <style>
+        :root {
+            --navy: #000042;
+            --turquoise: #40E0D0;
+            --light-blue: #E6F3F5;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--navy);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: white;
+        }
+        .slide {
+            width: 100vw;
+            height: 56.25vw;
+            max-height: 100vh;
+            max-width: 177.78vh;
+            margin: auto;
+            position: relative;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 60px;
+            object-fit: contain;
+        }
+        .title {
+            font-size: 48px;
+            color: var(--turquoise);
+            margin: 60px 0 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--turquoise);
+        }
+        .team-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .team-member {
+            flex: 1;
+            background: rgba(64, 224, 208, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(64, 224, 208, 0.2);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .member-header {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .member-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--turquoise);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: var(--navy);
+        }
+        .member-intro {
+            flex: 1;
+        }
+        .member-name {
+            font-size: 24px;
+            color: var(--turquoise);
+            margin-bottom: 5px;
+        }
+        .member-role {
+            font-size: 18px;
+            color: var(--light-blue);
+            margin-bottom: 10px;
+        }
+        .member-experience {
+            font-size: 14px;
+            color: var(--light-blue);
+            opacity: 0.8;
+        }
+        .responsibilities {
+            margin-top: 20px;
+        }
+        .section-title {
+            color: var(--turquoise);
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title::before {
+            content: "•";
+            color: var(--turquoise);
+        }
+        .responsibility-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .responsibility-list li {
+            color: var(--light-blue);
+            font-size: 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.4;
+        }
+        .responsibility-list li::before {
+            content: "→";
+            color: var(--turquoise);
+        }
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .tag {
+            background: rgba(64, 224, 208, 0.1);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--turquoise);
+            border: 1px solid rgba(64, 224, 208, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <img src="logo.png" alt="Edathena Academy" class="logo">
+        
+        <h1 class="title">LEADERSHIP TEAM</h1>
+
+        <div class="team-container">
+            <div class="team-member">
+                <div class="member-header">
+                    <div class="member-photo">SG</div>
+                    <div class="member-intro">
+                        <div class="member-name">Sudhir Giri</div>
+                        <div class="member-role">Co-Founder & Technology Lead</div>
+                        <div class="member-experience">18+ years in IT, AI, and EdTech</div>
+                    </div>
+                </div>
+                
+                <div class="responsibilities">
+                    <div class="section-title">Key Responsibilities</div>
+                    <ul class="responsibility-list">
+                        <li>Product Development & Technology Strategy</li>
+                        <li>AI Implementation & Innovation</li>
+                        <li>Team Leadership & Operations</li>
+                        <li>Infrastructure Management</li>
+                        <li>Growth Initiatives</li>
+                        <li>Content Strategy</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-tags">
+                    <div class="tag">Generative AI</div>
+                    <div class="tag">LLMs</div>
+                    <div class="tag">Prompt Engineering</div>
+                    <div class="tag">EdTech</div>
+                    <div class="tag">System Architecture</div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-header">
+                    <div class="member-photo">SM</div>
+                    <div class="member-intro">
+                        <div class="member-name">Sudaroli Murugan</div>
+                        <div class="member-role">Co-Founder & Business Strategy Lead</div>
+                        <div class="member-experience">10+ years in Business Strategy & Growth Expert</div>
+                    </div>
+                </div>
+                
+                <div class="responsibilities">
+                    <div class="section-title">Key Responsibilities</div>
+                    <ul class="responsibility-list">
+                        <li>Business Strategy & Growth</li>
+                        <li>Sales & Marketing</li>
+                        <li>Partnership Development</li>
+                        <li>Financial Planning</li>
+                        <li>Team Building</li>
+                        <li>Customer Engagement</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-tags">
+                    <div class="tag">Business Development</div>
+                    <div class="tag">Strategic Planning</div>
+                    <div class="tag">Market Analysis</div>
+                    <div class="tag">Partnership Building</div>
+                    <div class="tag">Growth Strategy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI EdTech - Strength vs Weakness</title>
+    <style>
+        :root {
+            --navy: #000042;
+            /* Strength Colors */
+            --s1: #40E0D0;  /* Turquoise */
+            --s2: #32CD32;  /* Lime */
+            --s3: #98FB98;  /* Pale Green */
+            --s4: #00CED1;  /* Dark Turquoise */
+            /* Weakness Colors */
+            --w1: #FF69B4;  /* Pink */
+            --w2: #FF6B6B;  /* Red */
+            --w3: #DDA0DD;  /* Plum */
+            --w4: #FFA07A;  /* Light Salmon */
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--navy);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: white;
+        }
+        .slide {
+            width: 100vw;
+            height: 56.25vw;
+            max-height: 100vh;
+            max-width: 177.78vh;
+            margin: auto;
+            position: relative;
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 60px;
+            object-fit: contain;
+        }
+        .title {
+            color: #40E0D0;
+            font-size: 48px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #40E0D0;
+            width: 100%;
+        }
+        .charts-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
+            gap: 60px;
+        }
+        .chart-section {
+            text-align: center;
+        }
+        .chart-title {
+            font-size: 32px;
+            color: #40E0D0;
+            margin-bottom: 40px;
+        }
+        .pie-chart {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 40px;
+        }
+        .legend {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            text-align: left;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            justify-content: flex-start;
+            min-width: 300px;
+        }
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+        }
+        .legend-text {
+            flex-grow: 1;
+        }
+        .percentage {
+            color: #40E0D0;
+            margin-left: 8px;
+            flex-shrink: 0;
+        }
+        .summary {
+            position: absolute;
+            bottom: 10px;
+            padding: 20px;
+            background: rgba(0, 0, 102, 0.3);
+            border-radius: 12px;
+            text-align: center;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <img src="logo.png" alt="Edathena Academy" class="logo">
+        <br>
+        <h1 class="title">STRENGTH VS WEAKNESS</h1>
+        
+        <div class="charts-container">
+            <div class="chart-section">
+                <h2 class="chart-title">Strengths</h2>
+                <svg class="pie-chart" viewBox="-1.2 -1.2 2.4 2.4">
+                    <path d="M 0 0 L 1 0 A 1 1 0 0 1 0.5 0.866 L 0 0" fill="var(--s1)" transform="rotate(0)"/>
+                    <path d="M 0 0 L 1 0 A 1 1 0 0 1 0.5 0.866 L 0 0" fill="var(--s2)" transform="rotate(108)"/>
+                    <path d="M 0 0 L 1 0 A 1 1 0 0 1 0.5 0.866 L 0 0" fill="var(--s3)" transform="rotate(201.6)"/>
+                    <path d="M 0 0 L 1 0 A 1 1 0 0 1 0.5 0.866 L 0 0" fill="var(--s4)" transform="rotate(288)"/>
+                </svg>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: var(--s1)"></div>
+                        <span class="legend-text">AI-Powered Personalization</span>
+                        <span class="percentage">30%</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: var(--s2)"></div>
+                        <span class="legend-text">Industry-aligned Curriculum</span>
+                        <span class="percentage">26%</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: var(--s3)"></div>
+                        <span class="legend-text">Competitive Pricing Model</span>
+                        <span class="percentage">24%</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: var(--s4)"></div>
+                        <span class="legend-text">Adaptive Learning Paths</span>
+                        <span class="percentage">20%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-section">
+                <h2 class="chart-title">Weaknesses</h2>
+                <svg class="pie-chart" viewBox="-1.2 -1.2 2.4 2.4">
+                    <path d="M 0 0 L 1 0 A 1 1 0 0 1 0.5 0.866 L 0 0" fill="var(--w1)" transform="rotate(0)"/>
+                    <path d="M 0 0 L 1 0 A 1 1 0 0 1 0.5 0.866 L 0 0" fill="var(--w2)" transform="rotate(128.52)"/>
+                    <path d="M 0 0 L 1 0 A 1 1 0 0 1 0.5 0.866 L 0 0" fill="var(--w3)" transform="rotate(198.36)"/>
+                    <path d="M 0 0 L 1 0 A 1 1 0 0 1 0.5 0.866 L 0 0" fill="var(--w4)" transform="rotate(242.28)"/>
+                </svg>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: var(--w1)"></div>
+                        <span class="legend-text">Limited Industry Certifications</span>
+                        <span class="percentage">35.7%</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: var(--w2)"></div>
+                        <span class="legend-text">Regional Language Support</span>
+                        <span class="percentage">19.4%</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: var(--w3)"></div>
+                        <span class="legend-text">Corporate Partnerships</span>
+                        <span class="percentage">12.2%</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: var(--w4)"></div>
+                        <span class="legend-text">Limited Offline Resources</span>
+                        <span class="percentage">32.7%</span>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="summary">
+            While our AI-powered personalization and curriculum strengths set us apart, expanding certifications and regional language support will accelerate market penetration
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits - Edathena Academy</title>
+    <style>
+        :root {
+            --navy: #000066;
+            --turquoise: #40E0D0;
+            --light-blue: #E6F3F5;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--navy);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .slide {
+            width: 100vw;
+            height: 56.25vw;
+            max-height: 100vh;
+            max-width: 177.78vh;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 60px;
+            object-fit: contain;
+        }
+        .header {
+            padding: 80px 40px 40px;
+            text-align: left;
+            border-bottom: 2px solid var(--turquoise);
+            margin-bottom: 40px;
+        }
+        .title {
+            font-size: 42px;
+            color: var(--turquoise);
+            margin-bottom: 20px;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 0 40px;
+            margin-bottom: 60px;
+            background-color: white;
+        }
+        .benefit-card {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background: rgba(64, 224, 208, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .benefit-image {
+            width: 200px;
+            height: 150px;
+            background: var(--light-blue);
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .benefit-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--turquoise);
+        }
+        .benefit-text {
+            color: var(--navy);
+            font-size: 18px;
+            line-height: 1.4;
+            margin: 0;
+        }
+        .footer {
+            background-color: var(--navy);
+            padding: 30px 40px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .footer-text {
+            color: var(--light-blue);
+            font-size: 24px;
+            text-align: center;
+            margin: 0;
+            line-height: 1.4;
+        }
+        .source {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            font-size: 14px;
+            opacity: 0.7;
+            color: var(--turquoise);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <img src="Logo.png" alt="Edathena Academy" class="logo">
+        
+        <div class="header">
+            <h1 class="title">Transform Your Career with Edathena - Benefits</h1>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <img src="cg.png" alt="Career Growth" class="benefit-image">
+                <div class="benefit-number">85%</div>
+                <p class="benefit-text">Placement rate in AI & data science roles</p>
+            </div>
+
+            <div class="benefit-card">
+                <img src="2.png" alt="Cost Effective" class="benefit-image">
+                <div class="benefit-number">60%</div>
+                <p class="benefit-text">Lower cost compared to traditional programs</p>
+            </div>
+
+            <div class="benefit-card">
+                <img src="3.png" alt="Learning Efficiency" class="benefit-image">
+                <div class="benefit-number">3x</div>
+                <p class="benefit-text">Faster skill acquisition with AI-powered learning</p>
+            </div>
+
+            <div class="benefit-card">
+                <img src="4.png" alt="Industry Ready" class="benefit-image">
+                <div class="benefit-number">100%</div>
+                <p class="benefit-text">Industry-aligned curriculum with real projects</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="footer-text">
+                Empowers learners with personalized AI education, industry-relevant skills, and career advancement opportunities through innovative learning methods
+            </p>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
